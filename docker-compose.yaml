@@ -29,5 +29,8 @@ services:
     container_name: node
     entrypoint: wait-for mysql:3306 -t 60 -- node index.js
     tty: true
+    volumes:
+      - ./node:/usr/src/app
+      - /usr/src/app/node_modules
     depends_on:
       - mysql
