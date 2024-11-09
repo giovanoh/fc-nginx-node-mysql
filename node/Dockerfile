@@ -13,3 +13,5 @@ RUN npm install -y
 # RUN npm install -y --loglevel verbose
 
 COPY . .
+
+RUN chown -R node:node node_modules
